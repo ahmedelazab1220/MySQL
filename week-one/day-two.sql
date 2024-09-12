@@ -8,8 +8,7 @@ CREATE DATABASE IF NOT EXISTS database_name;
 USE database_name;
 
 -- CREATE TABLE IN DATABASE
-CREATE TABLE IF NOT EXISTS table_name
-(
+CREATE TABLE IF NOT EXISTS table_name(
     column_name1 data_type,
     column_name2 data_type
 );

@@ -11,13 +11,13 @@ USE database_name;
 CREATE USER 'my_user'@'localhost' IDENTIFIED BY 'password';
 
 -- GRANT All PRIVILEGES ON All Database 
-GRANT ALL PRIVILEGES ON *.* TO 'training'@'localhost' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON *.* TO 'my_user'@'localhost' WITH GRANT OPTION;
 
 -- FLUSH PRIVILEGES , used to update MySQL with the latest changes made to user permissions without needing to restart the MySQL server.
 FLUSH PRIVILEGES;
 
 -- SHOW GRANTS FOR USER
-SHOW GRANTS FOR 'training'@'localhost';
+SHOW GRANTS FOR 'my_user'@'localhost';
 
 -- REVOKE GRANT OPTION FOR USER
 REVOKE GRANT OPTION ON *.* FROM 'my_user'@'localhost';
