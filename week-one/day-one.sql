@@ -8,7 +8,7 @@ DROP DATABASE IF EXISTS database_name;
 USE database_name;
 
 -- CREATE USER IN DATABASE
-CREATE USER 'training'@'localhost' IDENTIFIED BY 'training';
+CREATE USER 'my_user'@'localhost' IDENTIFIED BY 'password';
 
 -- GRANT All PRIVILEGES ON All Database 
 GRANT ALL PRIVILEGES ON *.* TO 'training'@'localhost' WITH GRANT OPTION;
