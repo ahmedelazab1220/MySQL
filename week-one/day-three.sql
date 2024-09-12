@@ -80,4 +80,11 @@ TRUNCATE TABLE table_name
 --- TRUNCATE is used for quickly emptying a table but has restrictions compared to DELETE. It is faster and resets the auto-increment counter but
 --- cannot be used with foreign key constraints, cannot include conditions, and cannot be used with tables that have triggers or certain constraints.
 
+-- to use truncate with foreign key
+SET FOREIGN_KEY_CHECKS = 0;
+TRUNCATE TABLE table_name;
+SET FOREIGN_KEY_CHECKS = 1;
+
+-- Truncate Multiple Tables
+TRUNCATE TABLE table1, table2
 
