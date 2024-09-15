@@ -1,0 +1,45 @@
+
+1. What is the purpose of the FLUSH PRIVILEGES command in MySQL, and when would you use it?
+
+The FLUSH PRIVILEGES command is used to reload the in-memory privileges from the privilege tables in the MySQL database.
+You would use this command when you manually modify the privilege tables and want to apply these changes without restarting the MySQL server.
+#############################################################################################################################################################################################
+
+2. Explain the difference between TRUNCATE and DELETE commands. Provide at least two key differences.
+
+- DELETE removes rows from a table but allows you to filter which rows to delete using a WHERE clause. 
+  On the other hand, TRUNCATE removes all rows from a table without using a WHERE clause.
+
+- TRUNCATE is faster and uses less transaction log space compared to DELETE because it deallocates the data pages. 
+  Also, TRUNCATE resets any auto-increment counters, while DELETE does not.
+
+#############################################################################################################################################################################################
+
+3. Describe the difference between VARCHAR and CHAR data types.
+
+- CHAR is a fixed-length data type. If you define a CHAR(10) and insert a string of fewer than 10 characters, MySQL will pad the string with spaces to make it exactly 10 characters long.
+
+- VARCHAR is a variable-length data type. If you define a VARCHAR(10) and insert a string of 5 characters, only those 5 characters are stored, and no extra padding is added.
+
+#############################################################################################################################################################################################
+
+4. What is the purpose of the REVOKE command? Provide an example of revoking INSERT and UPDATE privileges on a specific table.
+
+- The REVOKE command is used to remove previously granted privileges from a user. 
+  For example, to revoke INSERT and UPDATE privileges on the employees table from user emp_user, you would write:
+
+  REVOKE INSERT, UPDATE ON company_db.employees FROM 'emp_user'@'localhost';
+
+#############################################################################################################################################################################################
+
+5. In MySQL, what is the difference between a PRIMARY KEY and a UNIQUE KEY? Can a table have more than one PRIMARY KEY
+
+- A PRIMARY KEY uniquely identifies each row in a table and cannot contain NULL values. A table can only have one PRIMARY KEY.
+
+- A UNIQUE KEY also ensures uniqueness for a column, but it can contain a single NULL value, and a table can have multiple UNIQUE KEY columns.
+
+- No, a table cannot have more than one PRIMARY KEY, but it can have multiple UNIQUE constraints.
+
+#############################################################################################################################################################################################
+
+
